@@ -14,12 +14,12 @@ app.use(bodyParser.json());
 const server = http.createServer(app);
 
 app.get("/", function(req, res) {
-	console.log(req.body);
+	console.log(JSON.stringify(req.body, 0, 2));
 	res.sendStatus(200);
 })
 
 app.post("/", function(req, res) {
-	console.log(req.body);
+	console.log(JSON.stringify(req.body, 0, 2));
 	res.status(200).send(req.body);
 })
 
